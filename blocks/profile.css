@@ -1,0 +1,40 @@
+.profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 40px 0;
+  border-bottom: 1px solid #212121;
+}
+
+.profile__wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.profile__image {
+  width: 190px;
+  height: 190px;
+}
+
+.profile__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.profile__title {
+  margin: 0 auto;
+}
+
+.profile__decription {
+  margin: 0 auto;
+}
+
+.profile__button {
+}
+
+.profile__button_type_secondary {
+}
+
+.profile__button_type_large {
+}
