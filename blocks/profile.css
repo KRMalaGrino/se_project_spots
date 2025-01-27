@@ -2,7 +2,9 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
   padding: 40px 0;
+
   border-bottom: 1px solid #212121;
 }
 
@@ -20,21 +22,74 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  padding: 0 0 0 18px;
 }
 
 .profile__title {
   margin: 0 auto;
+
+  font-family: Poppins;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 32px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
 }
 
 .profile__decription {
   margin: 0 auto;
+
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
 }
 
 .profile__button {
+  text-align: center;
+  box-shadow: none;
 }
 
-.profile__button_type_secondary {
+.profile__edit-profile-wrapper {
 }
 
-.profile__button_type_large {
+.profile__edit-profile__image {
+}
+
+.profile__edit-profile-button[type="upload"] {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  width: 107px;
+  gap: 20px;
+}
+
+.profile__new-post-button[type="upload"] {
+  display: flex;
+  align-self: flex-end;
+
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #fcf5e5;
+
+  width: 149px;
+  height: 52px;
+
+  background-color: #212121;
+  border-radius: 10px;
 }
