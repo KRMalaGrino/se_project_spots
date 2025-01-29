@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -18,118 +19,113 @@
   <body>
     <div class="page">
       <header class="header">
-        <img class="header__logo" src="./images/Logo.png" alt="Spots logo" />
+        <img class="header__logo" src="./images/Logo.svg" alt="Spots logo" />
       </header>
       <main class="content">
-        <section class="profile">
-          <div class="profile__wrapper">
-            <img
-              class="profile__image"
-              src="./images/avatar.jpg"
-              alt="Avatar picture"
-            />
-            <div class="profile__text-wrapper">
-              <div>
-                <h1 class="profile__title">Bessie Coleman</h1>
-                <p class="profile__description">Civil Aviator</p>
-              </div>
-              <div class="profile__edit-profile-wrapper">
-                <img
-                  class="profile__edit-profile__image"
-                  src="./images/Group 2.png"
-                  alt="pencil edit tool"
-                />
-                <button type="upload" class="profile__edit-profile-button">
-                  Edit Profile
-                </button>
-              </div>
+        <section class="profile page__section">
+          <img
+            class="profile__avatar"
+            src="./images/avatar.jpg"
+            alt="Avatar picture"
+          />
+          <div class="profile__column">
+            <div>
+              <h1 class="profile__name">Bessie Coleman</h1>
+              <p class="profile__description">Civil Aviator</p>
             </div>
+            <button type="upload" class="profile__edit-btn">
+              <img src="./images/Group 2.png" alt="pencil icon" />
+              Edit Profile
+            </button>
           </div>
-          <button type="upload" class="profile__new-post-button">
-            + New Post
+          <button type="upload" class="profile__new-post-btn">
+            <img src="./images/Group 26.svg" alt="plus icon" />
+            New Post
           </button>
         </section>
-        <section class="cards">
-          <div class="cards__card">
-            <img
-              class="cards__card__image"
-              src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
-              alt="Val Thorens"
-            />
-            <div class="cards__card_wrapper">
-              <p class="cards__card__text">Val Thorens</p>
-              <button type="submit" class="cards__card__heart-button">
-                <img src="./images/Like-Icon.png" alt="Like icon" />
-              </button>
-            </div>
-          </div>
-          <div class="cards__card">
-            <img
-              class="cards__card__image"
-              src="./images/2-photo-by-ceiline-from-pexels.jpg"
-              alt="Restaurant terrace"
-            />
-            <div class="cards__card_wrapper">
-              <p class="cards__card__text">Restaurant terrace</p>
-              <button type="submit" class="cards__card__heart-button">
-                <img src="./images/Like-Icon.png" alt="Like icon" />
-              </button>
-            </div>
-          </div>
-          <div class="cards__card">
-            <img
-              class="cards__card__image"
-              src="./images/3-photo-by-tubanur-dogan-from-pexels.jpg"
-              alt="An outdoor cafe"
-            />
-            <div class="cards__card_wrapper">
-              <p class="cards__card__text">An outdoor cafe</p>
-              <button type="submit" class="cards__card__heart-button">
-                <img src="./images/Like-Icon.png" alt="Like icon" />
-              </button>
-            </div>
-          </div>
-          <div class="cards__card">
-            <img
-              class="cards__card__image"
-              src="./images/4-photo-by-maurice-laschet-from-pexels.jpg"
-              alt="A very long bridge, over the forest"
-            />
-            <div class="cards__card_wrapper">
-              <p class="cards__card__text">
-                A very long bridge, over the forest...
-              </p>
-              <button type="submit" class="cards__card__heart-button">
-                <img src="./images/Like-Icon.png" alt="Like icon" />
-              </button>
-            </div>
-          </div>
-          <div class="cards__card">
-            <img
-              class="cards__card__image"
-              src="./images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
-              alt="Tunnel with morning light"
-            />
-            <div class="cards__card_wrapper">
-              <p class="cards__card__text">Tunnel with morning light</p>
-              <button type="submit" class="cards__card__heart-button">
-                <img src="./images/Like-Icon.png" alt="Like icon" />
-              </button>
-            </div>
-          </div>
-          <div class="cards__card">
-            <img
-              class="cards__card__image"
-              src="./images/6-photo-by-moritz-feldmann-from-pexels.jpg"
-              alt="Mountain house"
-            />
-            <div class="cards__card_wrapper">
-              <p class="cards__card__text">Mountain house</p>
-              <button type="submit" class="cards__card__heart-button">
-                <img src="./images/Like-Icon.png" alt="Like icon" />
-              </button>
-            </div>
-          </div>
+        <section class="cards page__section">
+          <ul class="cards__list">
+            <li class="card">
+              <img
+                class="card__image"
+                src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
+                alt="Val Thorens"
+              />
+              <div class="card__content">
+                <p class="card__title">Val Thorens</p>
+                <button type="button" class="card__like-button">
+                  <img src="./images/Like-Icon.png" alt="Like icon" />
+                </button>
+              </div>
+            </li>
+            <li class="card">
+              <img
+                class="card__image"
+                src="./images/2-photo-by-ceiline-from-pexels.jpg"
+                alt="Restaurant terrace"
+              />
+              <div class="card__content">
+                <p class="card__title">Restaurant terrace</p>
+                <button type="button" class="card__like-button">
+                  <img src="./images/Like-Icon.png" alt="Like icon" />
+                </button>
+              </div>
+            </li>
+            <li class="card">
+              <img
+                class="card__image"
+                src="./images/3-photo-by-tubanur-dogan-from-pexels.jpg"
+                alt="An outdoor cafe"
+              />
+              <div class="card__content">
+                <p class="card__title">An outdoor cafe</p>
+                <button type="button" class="card__like-button">
+                  <img src="./images/Like-Icon.png" alt="Like icon" />
+                </button>
+              </div>
+            </li>
+            <li class="card">
+              <img
+                class="card__image"
+                src="./images/4-photo-by-maurice-laschet-from-pexels.jpg"
+                alt="A very long bridge, over the forest"
+              />
+              <div class="card__content">
+                <p class="card__title">
+                  A very long bridge, over the forest...
+                </p>
+                <button type="button" class="card__like-button">
+                  <img src="./images/Like-Icon.png" alt="Like icon" />
+                </button>
+              </div>
+            </li>
+            <li class="card">
+              <img
+                class="card__image"
+                src="./images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
+                alt="Tunnel with morning light"
+              />
+              <div class="card__content">
+                <p class="card__title">Tunnel with morning light</p>
+                <button type="button" class="card__like-button">
+                  <img src="./images/Like-Icon.png" alt="Like icon" />
+                </button>
+              </div>
+            </li>
+            <li class="card">
+              <img
+                class="card__image"
+                src="./images/6-photo-by-moritz-feldmann-from-pexels.jpg"
+                alt="Mountain house"
+              />
+              <div class="card__content">
+                <p class="card__title">Mountain house</p>
+                <button type="button" class="card__like-button">
+                  <img src="./images/Like-Icon.png" alt="Like icon" />
+                </button>
+              </div>
+            </li>
+          </ul>
         </section>
       </main>
       <footer class="footer">

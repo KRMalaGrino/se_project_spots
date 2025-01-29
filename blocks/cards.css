@@ -1,51 +1,24 @@
 .cards {
+  margin: 0 auto;
+  padding-top: 20px;
+  height: 970px;
+  border-bottom: 1px solid rgba(33, 33, 33, 0.4);
+}
+
+.cards__list {
+  margin: 0;
+  padding: 0;
+  gap: 40px 20px;
+
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding: 40px 0 0;
-  margin: 0 auto;
-  height: 1075px;
-  border-bottom: 1px solid #212121;
-  gap: 30px 20px;
-}
-
-.cards__card {
-  width: 485px;
-}
-
-.cards__card__image {
-  width: 485px;
-  height: 445px;
-  margin: 0 auto;
-}
-
-.cards__card_wrapper {
-  display: flex;
-  flex-direction: row;
+  grid-template-columns: repeat(auto-fit, 413px);
   justify-content: space-between;
 
-  padding: 12px 0 0 0;
+  list-style-type: none;
 }
 
-.cards__card__text {
-  margin: 0;
-
-  font-family: Poppins;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 24px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-}
-
-.cards__card__heart-button[type="submit"] {
-  width: 23px;
-  height: 20px;
-  top: 425px;
-  left: 390px;
-  gap: 0px;
-
-  display: flex;
-  align-self: center;
+@media screen and (max-width: 627px) {
+  .cards__list {
+    grid-template-columns: repeat(auto-fit, 288px);
+  }
 }
