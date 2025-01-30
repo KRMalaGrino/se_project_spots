@@ -4,24 +4,25 @@
 
 - Description
 - Technologies & techniques
-- Figma link
 - Images
+- Figma link
+- Video link
 
 **Description & functionality**
 
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.
+This project is an interactive social media web application called Spots . The site itself is coded in a way that allows the application to be used on a desktop or a phone . Versatile & flexible .
 
 **Technologies & techniques**
 
----------------text--------------
+We created this website using a reference from figma to replicate the layouts, typographies and other important details . VSCode was the coding application used . Mainly html & css files . Media queries were used to create the switching between desktop and cellphone views .
 
 **Pictures, GIFs, & screenshots**
 
----------compress first-----------
+---
 
 **Figma link**
 
-- [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
+- (https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
 
 **Video link**
 

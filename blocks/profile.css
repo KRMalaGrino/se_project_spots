@@ -47,7 +47,6 @@
 
 .profile__description {
   margin: 12px 0 0 0;
-  max-width: 420px;
 
   display: flex;
   flex-wrap: wrap;
@@ -66,6 +65,9 @@
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+}
+
+.profile__edit-icon {
 }
 
 .profile__edit-btn[type="upload"] {

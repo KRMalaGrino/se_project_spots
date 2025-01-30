@@ -12,7 +12,7 @@
 
   display: grid;
   grid-template-columns: repeat(auto-fit, 413px);
-  justify-content: space-between;
+  justify-content: center;
 
   list-style-type: none;
 }
