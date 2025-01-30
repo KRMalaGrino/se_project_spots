@@ -18,7 +18,14 @@ We created this website using a reference from figma to replicate the layouts, t
 
 **Pictures, GIFs, & screenshots**
 
----
+- Desktop (1440px)
+  https://drive.google.com/file/d/1yLMt9zNoxpLhAVQvTs_YMuaCzpBe4uu9/view?usp=drive_link
+
+- Phone (320px)
+  https://drive.google.com/file/d/1XMHfnE4T0Ay-JsQyixDSm2X_gWguu7RA/view?usp=drive_link
+
+- Components / Buttons
+  https://drive.google.com/file/d/1nN6hDPftFpD6NvvxZZXEsGwHwHS3hg4i/view?usp=drive_link
 
 **Figma link**
 
@@ -26,4 +33,4 @@ We created this website using a reference from figma to replicate the layouts, t
 
 **Video link**
 
----
+https://drive.google.com/file/d/1SNLMtmuHWFMcdcuTvs8dO84OvPNRXP0B/view?usp=drive_link
