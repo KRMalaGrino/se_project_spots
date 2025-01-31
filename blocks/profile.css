@@ -70,7 +70,7 @@
 .profile__edit-icon {
 }
 
-.profile__edit-btn[type="upload"] {
+.profile__edit-btn {
   font-family: Poppins;
   font-size: 16px;
   font-weight: 500;
@@ -91,11 +91,11 @@
   transition: 0.25s linear;
 }
 
-.profile__edit-btn[type="upload"]:hover {
+.profile__edit-btn:hover {
   opacity: 1;
 }
 
-.profile__new-post-btn[type="upload"] {
+.profile__new-post-btn {
   display: flex;
   align-self: flex-end;
 
@@ -120,7 +120,7 @@
   transition: 0.25s linear;
 }
 
-.profile__new-post-btn[type="upload"]:hover {
+.profile__new-post-btn:hover {
   opacity: 0.8;
 }
 
