@@ -2,11 +2,11 @@
 
 **Description & functionality**
 
-    This project is an interactive social media web application called Spots . Users can share there favorite images with the world . The site itself is coded in a way that allows the application to be used on a desktop or a phone . Versatile & flexible .
+This project is an interactive social media web application called Spots . Users can share there favorite images with the world . The site itself is coded in a way that allows the application to be used on a desktop or a phone . Versatile & flexible .
 
 **Technologies & techniques**
 
-    We created this website using a reference from figma to replicate the layouts, typographies and other important details . VSCode was the coding application used . Mainly html & css files . Media queries were used to create the switching between desktop and cellphone views . Responsive design .
+We created this website using a reference from figma to replicate the layouts, typographies and other important details . VSCode was the coding application used . Mainly html & css files . Media queries were used to create the switching between desktop and cellphone views . Responsive design .
 
 **Pictures, GIFs, & screenshots**
 
@@ -29,6 +29,6 @@
 
 **Deployment**
 
-    This webpage is deployed to GitHub Pages in the following link
+This webpage is deployed to GitHub Pages in the following link
 
-    - https://malryan9.github.io/se_project_spots/
+- https://malryan9.github.io/se_project_spots/
