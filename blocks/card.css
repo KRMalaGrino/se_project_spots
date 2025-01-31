@@ -9,6 +9,8 @@
   width: 100%;
   height: 413px;
   object-fit: cover;
+
+  border-radius: 8px;
 }
 
 .card__content {
@@ -23,7 +25,7 @@
   margin: 0;
   max-width: 380px;
 
-  font-family: Poppins;
+  font-family: "Poppins", Arial, sans-serif;
   font-size: 20px;
   font-weight: 500;
   line-height: 24px;
@@ -36,7 +38,7 @@
   overflow: hidden;
 }
 
-.card__like-button[type="button"] {
+.card__like-button {
   padding: 0;
   margin: 0;
   width: 23px;
@@ -49,7 +51,7 @@
   transition: 0.25s linear;
 }
 
-.card__like-button[type="button"]:hover {
+.card__like-button:hover {
   opacity: 100%;
 }
 
@@ -67,7 +69,7 @@
     font-size: 16px;
   }
 
-  .card__like-button[type="button"] {
+  .card__like-button {
     height: 18px;
     width: 20px;
   }
