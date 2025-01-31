@@ -48,6 +48,7 @@
   opacity: 40%;
   border: none;
 
+  cursor: pointer;
   transition: 0.25s linear;
 }
 
