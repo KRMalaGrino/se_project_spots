@@ -1,5 +1,5 @@
 .modal {
-  /* visibility: hidden; */
+  visibility: hidden;
 
   position: fixed;
   top: 0;
@@ -11,7 +11,7 @@
 }
 
 .modal_opened {
-  /* visibility: visible; */
+  visibility: visible;
 }
 
 .modal__container {

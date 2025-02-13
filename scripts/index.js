@@ -1,3 +1,5 @@
+// ------------------------------ARRAY----------------------------------
+
 const initialCards = [
   {
     name: "Joseph, OR",
@@ -24,5 +26,25 @@ const initialCards = [
     link: "https://unsplash.com/photos/the-sun-is-shining-through-the-trees-in-the-field-EqOOC2-0qjc",
   },
 ];
-
 console.log(initialCards);
+
+// -------------------------------OPEN----------------------------------
+
+const profileEditButton = document.querySelector(".profile__edit-btn");
+const modalOpen = document.querySelector(".modal");
+
+function openModel() {
+  modalOpen.classList.add("modal_opened");
+}
+
+profileEditButton.addEventListener("click", openModel);
+
+// -------------------------------CLOSE------------------------------------------
+
+const modalCloseButton = document.querySelector(".modal__button-close");
+
+function closeModel() {
+  modalOpen.classList.remove("modal_opened");
+}
+
+modalCloseButton.addEventListener("click", closeModel);
