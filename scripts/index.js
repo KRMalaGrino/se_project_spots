@@ -60,12 +60,11 @@ const initialCards = [
     link: "https://unsplash.com/photos/the-sun-is-shining-through-the-trees-in-the-field-EqOOC2-0qjc",
   },
 ];
-console.log(initialCards);
 
 // --------------------------CARD TEMPLATES-------------------------------
 
 const cardTemplate = document.querySelector("#card-template");
-const cardList = document.querySelector(".cards__list");
+const cardsList = document.querySelector(".cards__list");
 
 function getCardElement(data) {
   const cardElement = cardTemplate.content
@@ -73,14 +72,15 @@ function getCardElement(data) {
     .cloneNode(true);
 
   const cardNameEl = cardElement.querySelector(".card__title");
-  const imageElement = cardTemplate.querySelector(".card__image");
-
   cardNameEl.textContent = data.name;
 
   return cardElement;
 }
 
 for (let i = 0; i < initialCards.length; i++) {
-  const cardElement = getCardElement(initialCards(i));
-  cardslist.prepend(cardElement);
+  const cardElement = getCardElement(initialCards[i]);
+  cardsList.prepend(cardElement);
 }
+
+//   const cardNameEl = cardElement.querySelector(".card__title");
+//   const imageElement = cardTemplate.querySelector(".card__image");
