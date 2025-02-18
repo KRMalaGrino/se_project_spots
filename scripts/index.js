@@ -72,7 +72,12 @@ function getCardElement(data) {
     .cloneNode(true);
 
   const cardNameEl = cardElement.querySelector(".card__title");
+  const cardImageEl = cardElement.querySelector(".card__image");
+
   cardNameEl.textContent = data.name;
+  cardImageEl.textContent = data.link;
+  // cardImageEl.setAttribute("src", "link");
+  // cardImageEl.setAttribute("alt", "name");
 
   return cardElement;
 }
