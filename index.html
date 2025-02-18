@@ -47,86 +47,98 @@
         </section>
         <section class="cards page__section">
           <ul class="cards__list">
-            <li class="card">
-              <img
-                class="card__image"
-                src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
-                alt="Val Thorens"
-              />
-              <div class="card__content">
-                <h2 class="card__title">Val Thorens</h2>
-                <button type="button" class="card__like-button">
-                  <img src="./images/Like-Icon.svg" alt="Like icon" />
-                </button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                src="./images/2-photo-by-ceiline-from-pexels.jpg"
-                alt="Restaurant terrace"
-              />
-              <div class="card__content">
-                <h2 class="card__title">Restaurant terrace</h2>
-                <button type="button" class="card__like-button">
-                  <img src="./images/Like-Icon.svg" alt="Like icon" />
-                </button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                src="./images/3-photo-by-tubanur-dogan-from-pexels.jpg"
-                alt="An outdoor cafe"
-              />
-              <div class="card__content">
-                <h2 class="card__title">An outdoor cafe</h2>
-                <button type="button" class="card__like-button">
-                  <img src="./images/Like-Icon.svg" alt="Like icon" />
-                </button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                src="./images/4-photo-by-maurice-laschet-from-pexels.jpg"
-                alt="A very long bridge, over the forest"
-              />
-              <div class="card__content">
-                <h2 class="card__title">
-                  A very long bridge, over the forest...
-                </h2>
-                <button type="button" class="card__like-button">
-                  <img src="./images/Like-Icon.svg" alt="Like icon" />
-                </button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                src="./images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
-                alt="Tunnel with morning light"
-              />
-              <div class="card__content">
-                <h2 class="card__title">Tunnel with morning light</h2>
-                <button type="button" class="card__like-button">
-                  <img src="./images/Like-Icon.svg" alt="Like icon" />
-                </button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                src="./images/6-photo-by-moritz-feldmann-from-pexels.jpg"
-                alt="Mountain house"
-              />
-              <div class="card__content">
-                <h2 class="card__title">Mountain house</h2>
-                <button type="button" class="card__like-button">
-                  <img src="./images/Like-Icon.svg" alt="Like icon" />
-                </button>
-              </div>
-            </li>
+            <template id="card-template">
+              <li class="card">
+                <img
+                  class="card__image"
+                  src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
+                  alt="Val Thorens"
+                />
+                <div class="card__content">
+                  <h2 class="card__title">Val Thorens</h2>
+                  <button type="button" class="card__like-button">
+                    <img src="./images/Like-Icon.svg" alt="Like icon" />
+                  </button>
+                </div>
+              </li>
+            </template>
+            <template id="card-template">
+              <li class="card">
+                <img
+                  class="card__image"
+                  src="./images/2-photo-by-ceiline-from-pexels.jpg"
+                  alt="Restaurant terrace"
+                />
+                <div class="card__content">
+                  <h2 class="card__title">Restaurant terrace</h2>
+                  <button type="button" class="card__like-button">
+                    <img src="./images/Like-Icon.svg" alt="Like icon" />
+                  </button>
+                </div>
+              </li>
+            </template>
+            <template id="card-template">
+              <li class="card">
+                <img
+                  class="card__image"
+                  src="./images/3-photo-by-tubanur-dogan-from-pexels.jpg"
+                  alt="An outdoor cafe"
+                />
+                <div class="card__content">
+                  <h2 class="card__title">An outdoor cafe</h2>
+                  <button type="button" class="card__like-button">
+                    <img src="./images/Like-Icon.svg" alt="Like icon" />
+                  </button>
+                </div>
+              </li>
+            </template>
+            <template id="card-template">
+              <li class="card">
+                <img
+                  class="card__image"
+                  src="./images/4-photo-by-maurice-laschet-from-pexels.jpg"
+                  alt="A very long bridge, over the forest"
+                />
+                <div class="card__content">
+                  <h2 class="card__title">
+                    A very long bridge, over the forest...
+                  </h2>
+                  <button type="button" class="card__like-button">
+                    <img src="./images/Like-Icon.svg" alt="Like icon" />
+                  </button>
+                </div>
+              </li>
+            </template>
+            <template id="card-template">
+              <li class="card">
+                <img
+                  class="card__image"
+                  src="./images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
+                  alt="Tunnel with morning light"
+                />
+                <div class="card__content">
+                  <h2 class="card__title">Tunnel with morning light</h2>
+                  <button type="button" class="card__like-button">
+                    <img src="./images/Like-Icon.svg" alt="Like icon" />
+                  </button>
+                </div>
+              </li>
+            </template>
+            <template id="card-template">
+              <li class="card">
+                <img
+                  class="card__image"
+                  src="./images/6-photo-by-moritz-feldmann-from-pexels.jpg"
+                  alt="Mountain house"
+                />
+                <div class="card__content">
+                  <h2 class="card__title">Mountain house</h2>
+                  <button type="button" class="card__like-button">
+                    <img src="./images/Like-Icon.svg" alt="Like icon" />
+                  </button>
+                </div>
+              </li>
+            </template>
           </ul>
         </section>
       </main>
@@ -144,22 +156,22 @@
                 alt="close-icon"
               />
             </button>
-            <label for="name" class="modal__label"
+            <label for="profile-name-input" class="modal__label"
               >Name
               <input
                 type="text"
                 class="modal__input"
-                id="name"
+                id="profile-name-input"
                 name="name"
                 placeholder="Type your name"
               />
             </label>
-            <label for="description" class="modal__label"
+            <label for="profile-description-input" class="modal__label"
               >Description
               <input
                 type="text"
                 class="modal__input"
-                id="description"
+                id="profile-description-input"
                 name="description"
                 placeholder="Describe yourself"
               />
