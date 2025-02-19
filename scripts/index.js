@@ -25,11 +25,11 @@ function handleProfileFormSubmit(evt) {
   evt.preventDefault();
   profileName.textContent = editModalNameInput.value;
   profileDescription.textContent = editModalDescriptionInput.value;
-  closeModel();
+  closeModal();
 }
 
-profileEditButton.addEventListener("click", openModel);
-modalCloseButton.addEventListener("click", closeModel);
+profileEditButton.addEventListener("click", openModal);
+modalCloseButton.addEventListener("click", closeModal);
 profileForm.addEventListener("submit", handleProfileFormSubmit);
 
 // ------------------------------ARRAY----------------------------------
