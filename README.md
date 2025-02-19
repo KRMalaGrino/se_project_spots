@@ -31,4 +31,4 @@ We created this website using a reference from figma to replicate the layouts, t
 
 This webpage is deployed to GitHub Pages in the following link
 
-- https://malryan9.github.io/se_project_spots/
+- https://KRMalaGrino.github.io/se_project_spots/
