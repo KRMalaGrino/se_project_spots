@@ -1,7 +1,7 @@
 // -------------------------OPEN/CLOSE MODULE----------------------------------
 
 const profileEditButton = document.querySelector(".profile__edit-btn");
-const modalOpen = document.querySelector(".modal");
+const profileModal = document.querySelector(".modal");
 const modalCloseButton = document.querySelector(".modal__button-close");
 const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
@@ -9,16 +9,16 @@ const editModalNameInput = document.querySelector("#profile-name-input");
 const editModalDescriptionInput = document.querySelector(
   "#profile-description-input"
 );
-const editFormElement = document.querySelector(".modal__form");
+const profileForm = document.querySelector("#profile-form");
 
-function openModel() {
+function openModal() {
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = profileDescription.textContent;
-  modalOpen.classList.add("modal_opened");
+  profileModal.classList.add("modal_opened");
 }
 
-function closeModel() {
-  modalOpen.classList.remove("modal_opened");
+function closeModal() {
+  profileModal.classList.remove("modal_opened");
 }
 
 function handleProfileFormSubmit(evt) {
@@ -30,7 +30,7 @@ function handleProfileFormSubmit(evt) {
 
 profileEditButton.addEventListener("click", openModel);
 modalCloseButton.addEventListener("click", closeModel);
-editFormElement.addEventListener("submit", handleProfileFormSubmit);
+profileForm.addEventListener("submit", handleProfileFormSubmit);
 
 // ------------------------------ARRAY----------------------------------
 
@@ -75,9 +75,8 @@ function getCardElement(data) {
   const cardImageEl = cardElement.querySelector(".card__image");
 
   cardNameEl.textContent = data.name;
-  cardImageEl.textContent = data.link;
-  // cardImageEl.setAttribute("src", "link");
-  // cardImageEl.setAttribute("alt", "name");
+  cardImageEl.src = data.link;
+  cardImageEl.alt = data.name;
 
   return cardElement;
 }
@@ -86,6 +85,3 @@ for (let i = 0; i < initialCards.length; i++) {
   const cardElement = getCardElement(initialCards[i]);
   cardsList.prepend(cardElement);
 }
-
-//   const cardNameEl = cardElement.querySelector(".card__title");
-//   const imageElement = cardTemplate.querySelector(".card__image");
