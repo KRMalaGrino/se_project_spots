@@ -37,27 +37,27 @@ profileForm.addEventListener("submit", handleProfileFormSubmit);
 const initialCards = [
   {
     name: "Joseph, OR",
-    link: "https://unsplash.com/photos/a-view-of-a-mountain-range-with-a-lake-in-the-foreground-hus3TC-C3RQ",
+    link: "https://images.unsplash.com/photo-1716845134231-182b88c22a34?q=80&w=3474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     name: "Oregon Coast",
-    link: "https://unsplash.com/photos/black-rock-formation-on-body-of-water-during-daytime-IdEV3S3JkyU",
+    link: "https://images.unsplash.com/photo-1601698832159-665cbefd11da?q=80&w=3538&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     name: "Tumalo Falls, OR",
-    link: "https://unsplash.com/photos/green-trees-near-waterfalls-during-daytime-sbH8xclbcTY",
+    link: "https://media.istockphoto.com/id/174694196/photo/tumalo-falls.jpg?s=1024x1024&w=is&k=20&c=53yA1udcBFEorYTeqpLIiQ7sl_3xjWkQYNcQO8GNZl8=",
   },
   {
     name: "Central Oregon Cascade Range",
-    link: "https://unsplash.com/photos/brown-mountains-7kh9KKPWBaQ",
+    link: "https://images.unsplash.com/photo-1600123289984-1d7a1b2dbbb1?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     name: "Multnomah Falls, OR",
-    link: "https://unsplash.com/photos/waterfall-in-forest-jQ5mIxOgzBE",
+    link: "https://images.unsplash.com/photo-1566434109082-772727eba32f?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     name: "Southern Oregon",
-    link: "https://unsplash.com/photos/the-sun-is-shining-through-the-trees-in-the-field-EqOOC2-0qjc",
+    link: "https://images.unsplash.com/photo-1727829441341-52cece0b3c97?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
 
