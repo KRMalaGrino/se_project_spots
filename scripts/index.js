@@ -1,38 +1,81 @@
-// -------------------------OPEN/CLOSE MODULE----------------------------------
+// -------------------OPEN/CLOSE MODULE (Edit Profile)----------------------------------
 
+// ------- profile modal ----------
 const profileEditButton = document.querySelector(".profile__edit-btn");
-const profileModal = document.querySelector(".modal");
-const modalCloseButton = document.querySelector(".modal__button-close");
+const editModalCloseButton = document.querySelector(".modal__button-close");
 const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
+const editModal = document.querySelector("#edit-modal");
 const editModalNameInput = document.querySelector("#profile-name-input");
 const editModalDescriptionInput = document.querySelector(
   "#profile-description-input"
 );
 const profileForm = document.querySelector("#profile-form");
 
-function openModal() {
-  editModalNameInput.value = profileName.textContent;
-  editModalDescriptionInput.value = profileDescription.textContent;
-  profileModal.classList.add("modal_opened");
+function openModal(modal) {
+  modal.classList.add("modal_opened");
 }
 
-function closeModal() {
-  profileModal.classList.remove("modal_opened");
+function closeModal(modal) {
+  modal.classList.remove("modal_opened");
 }
 
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
   profileName.textContent = editModalNameInput.value;
   profileDescription.textContent = editModalDescriptionInput.value;
-  closeModal();
+  closeModal(editModal);
 }
 
-profileEditButton.addEventListener("click", openModal);
-modalCloseButton.addEventListener("click", closeModal);
+profileEditButton.addEventListener("click", () => {
+  editModalNameInput.value = profileName.textContent;
+  editModalDescriptionInput.value = profileDescription.textContent;
+  openModal(editModal);
+});
+editModalCloseButton.addEventListener("click", () => {
+  closeModal(editModal);
+});
 profileForm.addEventListener("submit", handleProfileFormSubmit);
 
-// ------------------------------ARRAY----------------------------------
+// ------- add-card modal ----------
+const profileNewPostButton = document.querySelector(".profile__new-post-btn");
+const profileAddCardForm = document.querySelector("#add-card-form");
+const cardLink = document.querySelector(".card__image");
+const cardCaption = document.querySelector(".card__title");
+const addCardModal = document.querySelector("#add-card-modal");
+const addCardLinkInput = document.querySelector("#profile-add-card-link-input");
+const addCardCaptionInput = document.querySelector(
+  "#profile-add-card-caption-input"
+);
+const addCardModalCloseButton = document.querySelector(".modal__button-close");
+
+function handleAddCardSubmit(evt) {
+  evt.preventDefault();
+
+  // const inputValues = {title addCardCaptionInput.value, link: addCardLinkInput.value};
+  // const cardElement = getCardElement(inputValues);
+  // cardsList.prepend(cardElement);
+
+  // cardLink.src = addCardLinkInput.value;
+  // cardLink.alt = addCardCaptionInput.value;
+  // cardCaption.textContent = addCardCaptionInput.value;
+  closeModal(addCardModal);
+}
+
+profileNewPostButton.addEventListener("click", () => {
+  // addCardLinkInput.value = cardLink.src;
+  // addCardCaptionInput.value = cardLink.src;
+  // addCardCaptionInput.value = cardCaption.textContent;
+  openModal(addCardModal);
+});
+
+addCardModalCloseButton.addEventListener("click", () => {
+  closeModal(addCardModal);
+});
+
+profileAddCardForm.addEventListener("submit", handleAddCardSubmit);
+
+// ------------------------------CARDS ARRAY----------------------------------
 
 const initialCards = [
   {
@@ -89,4 +132,16 @@ initialCards.forEach((item) => {
 // for (let i = 0; i < initialCards.length; i++) {
 //   const cardElement = getCardElement(initialCards[i]);
 //   cardsList.prepend(cardElement);
+// }
+
+// --------------------------CARD LIKE BUTTON----------------------------
+
+// function getCardElement(data) {
+//   const cardElement = cardTemplate.content
+//     .querySelector(".card")
+//     .cloneNode(true);
+
+//   // additional code
+
+//   return cardElement;
 // }
