@@ -44,6 +44,7 @@
   width: 23px;
   height: 20px;
 
+  background-image: url(../images/Like-Icon.svg);
   background-color: transparent;
   opacity: 40%;
   border: none;
@@ -54,6 +55,16 @@
 
 .card__like-button:hover {
   opacity: 100%;
+}
+
+.card__like-button_liked {
+  background-image: url(../images/State=Liked.svg);
+  opacity: 100%;
+  border: none;
+}
+
+.card__like-button_liked:hover {
+  background-image: url(../images/State=Liked-hover.svg);
 }
 
 @media screen and (max-width: 627px) {

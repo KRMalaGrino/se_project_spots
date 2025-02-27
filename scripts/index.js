@@ -116,10 +116,20 @@ function getCardElement(data) {
 
   const cardNameEl = cardElement.querySelector(".card__title");
   const cardImageEl = cardElement.querySelector(".card__image");
+  const cardLikeBtn = cardElement.querySelector(".card__like-button");
+  // TODO - download the delete button from the figma and upload and style it
+  // TODO - select the delete button
 
   cardNameEl.textContent = data.name;
   cardImageEl.src = data.link;
   cardImageEl.alt = data.name;
+
+  cardLikeBtn.addEventListener("click", () => {
+    cardLikeBtn.classList.toggle("card__like-button_liked");
+  });
+
+  // TODO - set the listener on delete button
+  // The handler should remove the card from the DOM (see basics of the dom in sprint 4 for removiong elements from the dom)
 
   return cardElement;
 }
