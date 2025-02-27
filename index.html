@@ -52,9 +52,8 @@
                 <img class="card__image" src="" alt="" />
                 <div class="card__content">
                   <h2 class="card__title"></h2>
-                  <button type="button" class="card__like-button">
-                    <img src="" alt="" />
-                  </button>
+                  <button type="button" class="card__like-button"></button>
+                  <button type="button" class="card__delete-button"></button>
                 </div>
               </li>
             </template>
@@ -133,6 +132,16 @@
             <button type="submit" class="modal__button-submit">Save</button>
           </form>
         </div>
+      </div>
+      <div class="modal" id="card-preview-modal">
+        <img class="modal__image-preview" src="" alt="" />
+        <button type="button" class="modal__button-close">
+          <img
+            class="modal__button-close-icon"
+            src="./images/Close-Icon.svg"
+            alt="close-icon"
+          />
+        </button>
       </div>
     </div>
     <script src="scripts/index.js" defer></script>

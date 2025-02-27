@@ -1,6 +1,5 @@
 // -------------------OPEN/CLOSE MODULE (Edit Profile)----------------------------------
 
-// ------- profile modal ----------
 const profileEditButton = document.querySelector(".profile__edit-btn");
 const editModalCloseButton = document.querySelector(".modal__button-close");
 const profileName = document.querySelector(".profile__name");
@@ -37,7 +36,8 @@ editModalCloseButton.addEventListener("click", () => {
 });
 profileForm.addEventListener("submit", handleProfileFormSubmit);
 
-// ------- add-card modal ----------
+// -------------------OPEN/CLOSE MODULE (ADD CARD)-----------------------
+
 const profileNewPostButton = document.querySelector(".profile__new-post-btn");
 const profileAddCardForm = document.querySelector("#add-card-form");
 const cardLink = document.querySelector(".card__image");
@@ -64,7 +64,7 @@ function handleAddCardSubmit(evt) {
 
 profileNewPostButton.addEventListener("click", () => {
   // addCardLinkInput.value = cardLink.src;
-  // addCardCaptionInput.value = cardLink.src;
+  // addCardCaptionInput.value = cardLink.alt;
   // addCardCaptionInput.value = cardCaption.textContent;
   openModal(addCardModal);
 });
@@ -117,8 +117,7 @@ function getCardElement(data) {
   const cardNameEl = cardElement.querySelector(".card__title");
   const cardImageEl = cardElement.querySelector(".card__image");
   const cardLikeBtn = cardElement.querySelector(".card__like-button");
-  // TODO - download the delete button from the figma and upload and style it
-  // TODO - select the delete button
+  const cardDeleteBtn = cardElement.querySelector(".card__delete-button");
 
   cardNameEl.textContent = data.name;
   cardImageEl.src = data.link;
@@ -128,8 +127,15 @@ function getCardElement(data) {
     cardLikeBtn.classList.toggle("card__like-button_liked");
   });
 
-  // TODO - set the listener on delete button
   // The handler should remove the card from the DOM (see basics of the dom in sprint 4 for removiong elements from the dom)
+  cardDeleteBtn.addEventListener("click", () => {
+    _______.classList.add("__________");
+  });
+
+  // card modal preview
+  cardImageEl.addEventListener("click", () => {
+    cardImageEl.classList.add("_____________");
+  });
 
   return cardElement;
 }
@@ -138,20 +144,3 @@ initialCards.forEach((item) => {
   const cardElement = getCardElement(item);
   cardsList.prepend(cardElement);
 });
-
-// for (let i = 0; i < initialCards.length; i++) {
-//   const cardElement = getCardElement(initialCards[i]);
-//   cardsList.prepend(cardElement);
-// }
-
-// --------------------------CARD LIKE BUTTON----------------------------
-
-// function getCardElement(data) {
-//   const cardElement = cardTemplate.content
-//     .querySelector(".card")
-//     .cloneNode(true);
-
-//   // additional code
-
-//   return cardElement;
-// }

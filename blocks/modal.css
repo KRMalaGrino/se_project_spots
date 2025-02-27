@@ -149,6 +149,10 @@
   opacity: 0.8;
 }
 
+.modal__image-preview {
+  visibility: visible;
+}
+
 @media screen and (max-width: 627px) {
   .modal {
     padding: 134px 10px 0;
