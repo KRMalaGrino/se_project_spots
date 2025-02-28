@@ -56,15 +56,13 @@ function handleAddCardSubmit(evt) {
     title: addCardCaptionInput.value,
     link: addCardLinkInput.value,
   };
+
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
   closeModal(addCardModal);
 }
 
 profileNewPostButton.addEventListener("click", () => {
-  // addCardLinkInput.value = cardLink.src;
-  // addCardCaptionInput.value = cardLink.alt;
-  // addCardCaptionInput.value = cardCaption.textContent;
   openModal(addCardModal);
 });
 
