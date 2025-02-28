@@ -27,6 +27,7 @@
   box-sizing: border-box;
   width: 100%;
   max-width: 730px;
+  max-height: 80vh;
   background-color: white;
 }
 
@@ -112,11 +113,14 @@
 .modal__button-close-icon_type_preview {
   background-color: transparent;
   border: none;
+  width: 40px;
+  height: 40px;
 }
 
 .modal__button-close_type_preview {
   position: absolute;
-  right: -1px;
+  right: -50px;
+  top: -5px;
   border: none;
 }
 
