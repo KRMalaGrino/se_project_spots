@@ -8,7 +8,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 0;
+  padding: 207px 10px;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -32,6 +32,7 @@
 
 .modal__container_type_preview {
   background-color: transparent;
+  padding: 0;
 }
 
 .modal__image-preview {
