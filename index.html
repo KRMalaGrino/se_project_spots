@@ -133,15 +133,25 @@
           </form>
         </div>
       </div>
-      <div class="modal" id="card-preview-modal">
-        <img class="modal__image-preview" src="" alt="" />
-        <button type="button" class="modal__button-close">
+      <div class="modal modal_opened" id="card-preview-modal">
+        <div class="modal__container modal__container_type_preview">
+          <button
+            type="button"
+            class="modal__button-close modal__button-close_type_preview"
+          >
+            <img
+              class="modal__button-close-icon modal__button-close-icon_type_preview"
+              src="#"
+              alt=""
+            />
+          </button>
           <img
-            class="modal__button-close-icon"
-            src="./images/Close-Icon.svg"
-            alt="close-icon"
+            class="modal__image-preview"
+            src="https://images.unsplash.com/photo-1601698832159-665cbefd11da?q=80&w=3538&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
           />
-        </button>
+          <p class="modal__image-caption"></p>
+        </div>
       </div>
     </div>
     <script src="scripts/index.js" defer></script>
