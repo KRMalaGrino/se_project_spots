@@ -36,6 +36,7 @@
 
 .modal__image-preview {
   margin: 0 auto;
+  padding: 0 auto;
 
   width: 100%;
   max-width: 80vw;
@@ -86,16 +87,12 @@
   background-image: url("./images/Close-Icon.svg");
 }
 
-.modal__button-close-icon_type_preview {
-  background-image: url("../images/Close-Icon_type_preview.svg");
-}
-
 .modal__button-close {
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  position: absolute;
+  position: fixed;
   top: 32px;
   right: 50px;
   padding: 0;
@@ -114,10 +111,13 @@
   opacity: 1;
 }
 
+.modal__button-close-icon_type_preview {
+  background-image: url("../images/Close-Icon_type_preview.svg");
+}
+
 .modal__button-close_type_preview {
   position: absolute;
   right: -1px;
-  /* opacity: 1; */
   border: none;
 }
 
@@ -195,6 +195,12 @@
 
   .modal__container {
     padding: 12px;
+  }
+
+  .modal__image-caption {
+    padding: 8px 0 0;
+
+    font-size: 16px;
   }
 
   .modal__title {
