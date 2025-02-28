@@ -52,13 +52,12 @@ const addCardModalCloseButton = document.querySelector(".modal__button-close");
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
 
-  // const inputValues = {title addCardCaptionInput.value, link: addCardLinkInput.value};
-  // const cardElement = getCardElement(inputValues);
-  // cardsList.prepend(cardElement);
-
-  // cardLink.src = addCardLinkInput.value;
-  // cardLink.alt = addCardCaptionInput.value;
-  // cardCaption.textContent = addCardCaptionInput.value;
+  const inputValues = {
+    title: addCardCaptionInput.value,
+    link: addCardLinkInput.value,
+  };
+  const cardElement = getCardElement(inputValues);
+  cardsList.prepend(cardElement);
   closeModal(addCardModal);
 }
 
@@ -133,9 +132,8 @@ function getCardElement(data) {
     cardLikeBtn.classList.toggle("card__like-button_liked");
   });
 
-  // The handler should remove the card from the DOM (see basics of the dom in sprint 4 for removiong elements from the dom)
   cardDeleteBtn.addEventListener("click", () => {
-    _______.classList.add("__________");
+    cardElement.remove();
   });
 
   // card modal preview open
