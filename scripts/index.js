@@ -47,7 +47,9 @@ const addCardLinkInput = document.querySelector("#profile-add-card-link-input");
 const addCardCaptionInput = document.querySelector(
   "#profile-add-card-caption-input"
 );
-const addCardModalCloseButton = document.querySelector(".modal__button-close");
+const addCardModalCloseButton = addCardModal.querySelector(
+  ".modal__button-close"
+);
 
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
