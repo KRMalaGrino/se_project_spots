@@ -2,13 +2,15 @@
   visibility: hidden;
   opacity: 0;
   transition: visibility 0.5s linear, opacity 0.25s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 207px 10px;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -29,6 +31,11 @@
   max-width: 730px;
   max-height: 80vh;
   background-color: white;
+}
+
+.modal__image-container {
+  display: block;
+  position: relative;
 }
 
 .modal__container_type_preview {
@@ -119,8 +126,9 @@
 
 .modal__button-close_type_preview {
   position: absolute;
-  right: -50px;
-  top: -5px;
+  top: unset;
+  right: calc(100% + 5px);
+  bottom: calc(100% + 5px);
   border: none;
 }
 
@@ -216,6 +224,11 @@
   .modal__button-close {
     top: 12px;
     right: 12px;
+  }
+
+  .modal__button-close_type_preview {
+    top: ;
+    right: ;
   }
 
   .modal__label {
