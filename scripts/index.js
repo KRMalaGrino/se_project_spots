@@ -10,7 +10,6 @@ const editModalDescriptionInput = document.querySelector(
   "#profile-description-input"
 );
 const profileForm = document.querySelector("#profile-form");
-const addCardModal = document.querySelector("#add-card-modal");
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
@@ -36,10 +35,6 @@ modalCloseButton.addEventListener("click", () => {
   closeModal(editModal);
 });
 
-modalCloseButton.addEventListener("click", () => {
-  closeModal(addCardModal);
-});
-
 profileForm.addEventListener("submit", handleProfileFormSubmit);
 
 // -------------------OPEN/CLOSE MODULE (ADD CARD)-----------------------
@@ -48,11 +43,11 @@ const profileNewPostButton = document.querySelector(".profile__new-post-btn");
 const profileAddCardForm = document.querySelector("#add-card-form");
 const cardLink = document.querySelector(".card__image");
 const cardCaption = document.querySelector(".card__title");
-//const addCardModal = document.querySelector("#add-card-modal");
 const addCardLinkInput = document.querySelector("#profile-add-card-link-input");
 const addCardCaptionInput = document.querySelector(
   "#profile-add-card-caption-input"
 );
+const addCardModal = document.querySelector("#add-card-modal");
 
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
