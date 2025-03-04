@@ -99,6 +99,9 @@ const initialCards = [
 
 const cardTemplate = document.querySelector("#card-template");
 const cardsList = document.querySelector(".cards__list");
+const modalPreview = document.querySelector("#card-preview-modal");
+const modalImagePreview = document.querySelector(".modal__image-preview");
+const modalCaption = document.querySelector(".modal__image-caption");
 
 function getCardElement(data) {
   const cardElement = cardTemplate.content
@@ -109,9 +112,6 @@ function getCardElement(data) {
   const cardImageEl = cardElement.querySelector(".card__image");
   const cardLikeBtn = cardElement.querySelector(".card__like-button");
   const cardDeleteBtn = cardElement.querySelector(".card__delete-button");
-  const modalPreview = document.querySelector("#card-preview-modal");
-  const modalImagePreview = document.querySelector(".modal__image-preview");
-  const modalCaption = document.querySelector(".modal__image-caption");
 
   cardNameEl.textContent = data.name;
   cardImageEl.src = data.link;
