@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 16px;
+  padding: 0 10px;
 
   position: fixed;
   top: 0;
@@ -65,7 +65,10 @@
   border-radius: 8px;
 
   color: #ffffff;
+  font-family: "Poppins", Arial, sans-serif;
   font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
 
   position: absolute;
   left: 0;
@@ -133,9 +136,6 @@
 }
 
 .modal__button-close_type_preview {
-  /* top: unset; */
-  /* right: calc(100% + 5px);
-  bottom: calc(100% + 5px); */
   position: absolute;
   right: -45px;
   top: 3px;
@@ -219,9 +219,12 @@
   }
 
   .modal__image-caption {
-    padding: 8px 0 0;
+    padding: 4px 8px;
 
+    font-family: "Poppins", Arial, sans-serif;
     font-size: 16px;
+    font-weight: 500;
+    line-height: 19.2px;
   }
 
   .modal__title {
