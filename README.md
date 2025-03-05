@@ -6,7 +6,7 @@ This project is an interactive social media web application called Spots . Users
 
 **Technologies & techniques**
 
-We created this website using a reference from figma to replicate the layouts, typographies and other important details . VSCode was the coding application used . Mainly html & css files . Media queries were used to create the switching between desktop and cellphone views . Responsive design .
+We created this website using a reference from figma to replicate the layouts, typographies and other important details . VSCode was the coding application used . JavaScript, HTML & CSS files . Media queries were used to create the switching between desktop and cellphone views . Responsive design .
 
 **Pictures, GIFs, & screenshots**
 
