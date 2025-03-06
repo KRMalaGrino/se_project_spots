@@ -50,7 +50,7 @@ function handleAddCardSubmit(evt) {
   evt.preventDefault();
 
   const inputValues = {
-    title: addCardCaptionInput.value,
+    name: addCardCaptionInput.value,
     link: addCardLinkInput.value,
   };
 
