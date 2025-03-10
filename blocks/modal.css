@@ -188,7 +188,7 @@
   border: 1px solid rgb(255, 0, 0, 0.6);
 }
 
-.modal__input_error_active {
+.modal__input_error_visible {
   visibility: visible;
 }
 
@@ -228,7 +228,7 @@
   opacity: 0.8;
 }
 
-.modal__button-submit_inactive {
+.modal__button-submit_disabled {
   opacity: 50%;
 
   cursor: auto;
