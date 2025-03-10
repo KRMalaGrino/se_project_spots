@@ -86,7 +86,9 @@
                 maxlength="40"
                 required
               />
-              <span class="modal__error">Please fill out this field.</span>
+              <span class="modal__error" id="modal__error-name"
+                >Please fill out this field.</span
+              >
             </label>
             <label for="profile-description-input" class="modal__label"
               >Description
@@ -100,7 +102,7 @@
                 maxlength="200"
                 required
               />
-              <span class="modal__error"
+              <span class="modal__error" id="modal__error-description"
                 >Please lengthen this text to 2 characters or more (you are
                 currently using 1 character).</span
               >
@@ -130,7 +132,9 @@
                 placeholder="Paste a link to the picture"
                 required
               />
-              <span class="modal__error">Please enter a URL.</span>
+              <span class="modal__error" id="modal__error-link"
+                >Please enter a URL.</span
+              >
             </label>
             <label for="profile-add-card-caption-input" class="modal__label"
               >Caption
@@ -144,7 +148,9 @@
                 maxlength="30"
                 required
               />
-              <span class="modal__error">Please fill out this field.</span>
+              <span class="modal__error" id="modal__error-caption"
+                >Please fill out this field.</span
+              >
             </label>
             <button type="submit" class="modal__button-submit">Save</button>
           </form>
