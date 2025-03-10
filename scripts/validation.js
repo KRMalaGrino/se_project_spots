@@ -9,15 +9,15 @@ const settings = {
 
 const showInputError = (formElement, inputElement, errorMessage, config) => {
   const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
-  errorElement.textContent = errorMessage;
-  errorElement.classList.add(config.errorClass);
+  // errorElement.textContent = errorMessage;
+  // errorElement.classList.add(config.errorClass);
   inputElement.classList.add(config.inputErrorClass);
 };
 
 const hideInputError = (formElement, inputElement, config) => {
   const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
-  errorElement.textContent = "";
-  errorElement.classList.remove(config.errorClass);
+  // errorElement.textContent = "";
+  // errorElement.classList.remove(config.errorClass);
   inputElement.classList.remove(config.inputErrorClass);
 };
 
@@ -65,13 +65,12 @@ const setEventListeners = (formElement, config) => {
     formElement.querySelectorAll(config.inputSelector)
   );
   const buttonElement = formElement.querySelector(config.submitButtonSelector);
-
-  toggleButtonState(inputList, buttonElement, config);
+  // toggleButtonState(inputList, buttonElement, config);
 
   inputList.forEach((inputElement) => {
     inputElement.addEventListener("input", function () {
       checkInputValidity(formElement, inputElement, config);
-      toggleButtonState(inputList, buttonElement, config);
+      // toggleButtonState(inputList, buttonElement, config);
     });
   });
 };
