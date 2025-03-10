@@ -1,15 +1,15 @@
 const showInputError = (formElement, inputElement, errorMessage) => {
   const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
   errorElement.textContent = errorMessage;
-  errorElement.classList.add(".modal__input_type_error");
-  // inputElement.classList.add(".");
+  errorElement.classList.add(".modal__input_error_active");
+  inputElement.classList.add(".modal__input_type_error");
 };
 
 const hideInputError = (formElement, inputElement) => {
   const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
   errorElement.textContent = "";
-  errorElement.classList.remove(".modal__input_type_error");
-  // inputElement.classList.remove(".");
+  errorElement.classList.remove(".modal__input_error_active");
+  inputElement.classList.remove(".modal__input_type_error");
 };
 
 const checkInputValidity = (formElement, inputElement) => {
@@ -29,8 +29,10 @@ const hasInvalidInput = (inputList) => {
 const toggleButtonState = (inputList, buttonElement) => {
   if (hasInvalidInput(inputList)) {
     buttonElement.classList.add(".modal__button-submit_inactive");
+    buttonElement.disabled = true;
   } else {
     buttonElement.classList.remove(".modal__button-submit_inactive");
+    buttonElement.disabled = false;
   }
 };
 
