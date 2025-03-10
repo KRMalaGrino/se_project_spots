@@ -34,7 +34,7 @@
   box-sizing: border-box;
   width: 100%;
   max-width: 730px;
-  max-height: 80vh;
+  /* max-height: 80vh; */
   background-color: white;
 }
 
@@ -146,7 +146,7 @@
   display: flex;
   flex-direction: column;
 
-  margin: 0 auto;
+  margin: 0 0 32px;
   gap: 8px;
 
   font-family: "Poppins", Arial, sans-serif;
@@ -160,7 +160,7 @@
 }
 
 .modal__input {
-  margin-bottom: 32px;
+  margin: 0;
   padding: 16px 12px;
   gap: 10px;
   border-radius: 8px;
@@ -180,8 +180,29 @@
   transition: opacity 0.25s linear;
 }
 
+.modal__input__error {
+  border: #ff0000b2;
+}
+
 .modal__input:hover {
   opacity: 1;
+}
+
+.modal__input:valid {
+  /* color: green; */
+}
+
+.modal__input:invalid {
+  /* color: red; */
+}
+
+.modal__error {
+  margin: 0;
+  padding: 0;
+  display: block;
+
+  color: #ff0000b2;
+  line-height: 110%;
 }
 
 .modal__button-submit {
@@ -207,6 +228,10 @@
 
 .modal__button-submit:hover {
   opacity: 0.8;
+}
+
+.modal__button-submit:invalid {
+  opacity: 50%;
 }
 
 @media screen and (max-width: 627px) {
@@ -255,7 +280,7 @@
   }
 
   .modal__input {
-    margin: 0 0 24px;
+    margin: 0;
   }
 
   .modal__button-submit {
