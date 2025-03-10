@@ -28,16 +28,26 @@ const hasInvalidInput = (inputList) => {
 
 const toggleButtonState = (inputList, buttonElement) => {
   if (hasInvalidInput(inputList)) {
-    buttonElement.classList.add(".modal__button-submit_inactive");
-    buttonElement.disabled = true;
+    disableButton(buttonElement);
   } else {
     buttonElement.classList.remove(".modal__button-submit_inactive");
     buttonElement.disabled = false;
   }
 };
 
+const disableButton = (buttonElement) => {
+  buttonElement.classList.add(".modal__button-submit_inactive");
+  buttonElement.disabled = true;
+};
+
+// const resetValidation = (formElement, inputList) => {
+//   inputList.forEach((input) => {
+//     hideInputError(formElement, input);
+//   });
+// };
+
 const setEventListeners = (formElement) => {
-  const inputList = formElement.querySelectorAll(".modal__input");
+  const inputList = Array.from(formElement.querySelectorAll(".modal__input"));
   const buttonElement = formElement.querySelector(".modal__button-submit");
 
   toggleButtonState(inputList, buttonElement);

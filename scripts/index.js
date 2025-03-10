@@ -29,6 +29,7 @@ function handleProfileFormSubmit(evt) {
 profileEditButton.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = profileDescription.textContent;
+  // resetValidation(profileForm, [editModalNameInput, editModalDescriptionInput]);
   openModal(editModal);
 });
 
@@ -36,6 +37,7 @@ profileForm.addEventListener("submit", handleProfileFormSubmit);
 
 // -------------------OPEN/CLOSE MODULE (ADD CARD)-----------------------
 
+const cardSubmitButton = document.querySelector(".modal__button-submit");
 const profileNewPostButton = document.querySelector(".profile__new-post-btn");
 const profileAddCardForm = document.querySelector("#add-card-form");
 const cardLink = document.querySelector(".card__image");
@@ -57,6 +59,7 @@ function handleAddCardSubmit(evt) {
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
   profileAddCardForm.reset();
+  disableButton(cardSubmitButton);
   closeModal(addCardModal);
 }
 
@@ -137,11 +140,13 @@ function getCardElement(data) {
   return cardElement;
 }
 
+// ----- card loop ------
 initialCards.forEach((item) => {
   const cardElement = getCardElement(item);
   cardsList.prepend(cardElement);
 });
 
+// ------ modal close button ------
 modalCloseButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const modal = button.closest(".modal");
