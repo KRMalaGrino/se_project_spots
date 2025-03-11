@@ -188,10 +188,6 @@
   border: 1px solid rgb(255, 0, 0, 0.6);
 }
 
-.modal__input_error_visible {
-  visibility: visible;
-}
-
 .modal__error {
   margin: 0;
   padding: 0;
@@ -200,7 +196,11 @@
   color: #ff0000b2;
   line-height: 110%;
 
-  /* visibility: hidden; */
+  visibility: hidden;
+}
+
+.modal__input_error_visible {
+  visibility: visible;
 }
 
 .modal__button-submit {
