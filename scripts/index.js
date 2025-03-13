@@ -10,13 +10,24 @@ const editModalDescriptionInput = document.querySelector(
   "#profile-description-input"
 );
 const profileForm = document.querySelector("#profile-form");
+const modal = document.querySelectorAll(".modal");
+
+// --------- escape button --------
+function handleEscape(evt) {
+  if (evt.key === "Escape") {
+    const activeModal = document.querySelector(".modal_opened");
+    closeModal(activeModal);
+  }
+}
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
+  document.addEventListener("keydown", handleEscape);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
+  document.removeEventListener("keydown", handleEscape);
 }
 
 function handleProfileFormSubmit(evt) {

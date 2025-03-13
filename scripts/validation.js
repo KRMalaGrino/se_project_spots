@@ -29,6 +29,11 @@ const checkInputValidity = (formElement, inputElement, config) => {
       inputElement.validationMessage,
       config
     );
+    // disableButton(
+    //   formElement,
+    //   inputElement,
+    //   config
+    // );
   } else {
     hideInputError(formElement, inputElement, config);
   }
