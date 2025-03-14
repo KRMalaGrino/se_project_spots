@@ -12,7 +12,17 @@ const editModalDescriptionInput = document.querySelector(
 const profileForm = document.querySelector("#profile-form");
 const modal = document.querySelectorAll(".modal");
 
-// --------- escape button --------
+modal.forEach((modal) => {
+  modal.addEventListener("mousedown", (evt) => {
+    if (
+      evt.target.classList.contains("modal") ||
+      evt.target.classList.contains("modal__button-close")
+    ) {
+      closeModal(modal);
+    }
+  });
+});
+
 function handleEscape(evt) {
   if (evt.key === "Escape") {
     const activeModal = document.querySelector(".modal_opened");
@@ -69,9 +79,8 @@ function handleAddCardSubmit(evt) {
 
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
-  profileAddCardForm.reset();
-  disableButton(cardSubmitButton, settings); // ---- settings ?? -----
   closeModal(addCardModal);
+  profileAddCardForm.reset();
 }
 
 profileNewPostButton.addEventListener("click", () => {
