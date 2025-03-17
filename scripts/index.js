@@ -84,7 +84,7 @@ function handleAddCardSubmit(evt) {
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
   closeModal(addCardModal);
-  // profileAddCardForm.reset();
+  profileAddCardForm.reset();
   disableButton(evt.submitter, settings);
 }
 
