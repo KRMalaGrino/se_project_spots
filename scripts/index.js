@@ -81,13 +81,11 @@ function handleAddCardSubmit(evt) {
     link: addCardLinkInput.value,
   };
 
-  const form = document.querySelector(".modal__form");
-  form.reset();
-
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
   closeModal(addCardModal);
-  profileAddCardForm.reset();
+  // profileAddCardForm.reset();
+  disableButton(evt.submitter, settings);
 }
 
 profileNewPostButton.addEventListener("click", () => {
