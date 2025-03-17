@@ -63,11 +63,11 @@ const disableButton = (buttonElement, config) => {
   buttonElement.disabled = true;
 };
 
-// const resetValidation = (formElement, inputList, config) => {
-//   inputList.forEach((input) => {
-//     hideInputError(formElement, input, config);
-//   });
-// };
+const resetValidation = (formElement, inputList, config) => {
+  inputList.forEach((input) => {
+    hideInputError(formElement, input, config);
+  });
+};
 
 const setEventListeners = (formElement, config) => {
   const inputList = Array.from(
