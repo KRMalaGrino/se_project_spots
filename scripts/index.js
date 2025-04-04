@@ -1,3 +1,10 @@
+import {
+  enableValidation,
+  resetValidation,
+  disableButton,
+  settings,
+} from "./validation.js";
+
 // -------------------OPEN/CLOSE MODULE (Edit Profile)----------------------------------
 
 const profileEditButton = document.querySelector(".profile__edit-btn");
@@ -50,6 +57,7 @@ function handleProfileFormSubmit(evt) {
 profileEditButton.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = profileDescription.textContent;
+  // fix error
   resetValidation(
     profileForm,
     [editModalNameInput, editModalDescriptionInput],
@@ -178,3 +186,5 @@ modalCloseButtons.forEach((button) => {
     closeModal(modal);
   });
 });
+
+enableValidation(settings);
