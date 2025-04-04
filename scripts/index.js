@@ -70,11 +70,8 @@ profileForm.addEventListener("submit", handleProfileFormSubmit);
 
 // -------------------OPEN/CLOSE MODULE (ADD CARD)-----------------------
 
-const cardSubmitButton = document.querySelector(".modal__button-submit");
 const profileNewPostButton = document.querySelector(".profile__new-post-btn");
 const profileAddCardForm = document.querySelector("#add-card-form");
-const cardLink = document.querySelector(".card__image");
-const cardCaption = document.querySelector(".card__title");
 const addCardLinkInput = document.querySelector("#profile-add-card-link-input");
 const addCardCaptionInput = document.querySelector(
   "#profile-add-card-caption-input"
