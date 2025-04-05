@@ -3,7 +3,9 @@ import {
   resetValidation,
   disableButton,
   settings,
-} from "./validation.js";
+} from "../scripts/validation.js";
+
+import "./index.css";
 
 // -------------------OPEN/CLOSE MODULE (Edit Profile)----------------------------------
 
