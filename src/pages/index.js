@@ -7,6 +7,36 @@ import {
 
 import "./index.css";
 
+const img1 = new URL(
+  "https://images.unsplash.com/photo-1716845134231-182b88c22a34?q=80&w=3474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  import.meta.url
+);
+const img2 = new URL(
+  "https://images.unsplash.com/photo-1601698832159-665cbefd11da?q=80&w=3538&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  import.meta.url
+);
+const img3 = new URL(
+  "https://media.istockphoto.com/id/174694196/photo/tumalo-falls.jpg?s=1024x1024&w=is&k=20&c=53yA1udcBFEorYTeqpLIiQ7sl_3xjWkQYNcQO8GNZl8=",
+  import.meta.url
+);
+const img4 = new URL(
+  "https://images.unsplash.com/photo-1600123289984-1d7a1b2dbbb1?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  import.meta.url
+);
+const img5 = new URL(
+  "https://images.unsplash.com/photo-1566434109082-772727eba32f?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  import.meta.url
+);
+const img6 = new URL(
+  "https://images.unsplash.com/photo-1727829441341-52cece0b3c97?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  import.meta.url
+);
+
+// import logoSrc from "../src/images/Logo.svg";
+
+// const headerLogo = document.getElementById("header-logo");
+// headerLogo.src = logoSrc;
+
 // -------------------OPEN/CLOSE MODULE (Edit Profile)----------------------------------
 
 const profileEditButton = document.querySelector(".profile__edit-btn");
@@ -106,27 +136,27 @@ profileAddCardForm.addEventListener("submit", handleAddCardSubmit);
 const initialCards = [
   {
     name: "Joseph, OR",
-    link: "https://images.unsplash.com/photo-1716845134231-182b88c22a34?q=80&w=3474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    link: img1,
   },
   {
     name: "Oregon Coast",
-    link: "https://images.unsplash.com/photo-1601698832159-665cbefd11da?q=80&w=3538&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    link: img2,
   },
   {
     name: "Tumalo Falls, OR",
-    link: "https://media.istockphoto.com/id/174694196/photo/tumalo-falls.jpg?s=1024x1024&w=is&k=20&c=53yA1udcBFEorYTeqpLIiQ7sl_3xjWkQYNcQO8GNZl8=",
+    link: img3,
   },
   {
     name: "Central Oregon Cascade Range",
-    link: "https://images.unsplash.com/photo-1600123289984-1d7a1b2dbbb1?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    link: img4,
   },
   {
     name: "Multnomah Falls, OR",
-    link: "https://images.unsplash.com/photo-1566434109082-772727eba32f?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    link: img5,
   },
   {
     name: "Southern Oregon",
-    link: "https://images.unsplash.com/photo-1727829441341-52cece0b3c97?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    link: img6,
   },
 ];
 
