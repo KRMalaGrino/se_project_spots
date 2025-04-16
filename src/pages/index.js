@@ -72,9 +72,8 @@ const api = new Api({
   },
 });
 
-// ----- card loop ------
 api
-  .getInitialCards()
+  .getAppInfo()
   .then((cards) => {
     cards.forEach((item) => {
       const cardElement = getCardElement(item);
