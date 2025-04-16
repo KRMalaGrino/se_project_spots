@@ -6,6 +6,7 @@ import {
 } from "../scripts/validation.js";
 
 import "./index.css";
+import Api from "../utils/Api.js";
 
 const img1 = new URL(
   "../images/1-photo-by-moritz-feldmann-from-pexels.jpg",
@@ -32,10 +33,55 @@ const img6 = new URL(
   import.meta.url
 );
 
-// import logoSrc from "../src/images/Logo.svg";
+// ------------------------------CARDS ARRAY----------------------------------
 
-// const headerLogo = document.getElementById("header-logo");
-// headerLogo.src = logoSrc;
+const initialCards = [
+  {
+    name: "Joseph, OR",
+    link: img1,
+  },
+  {
+    name: "Oregon Coast",
+    link: img2,
+  },
+  {
+    name: "Tumalo Falls, OR",
+    link: img3,
+  },
+  {
+    name: "Central Oregon Cascade Range",
+    link: img4,
+  },
+  {
+    name: "Multnomah Falls, OR",
+    link: img5,
+  },
+  {
+    name: "Southern Oregon",
+    link: img6,
+  },
+];
+
+// ------------------ Instantiating the API class ---------------------
+
+const api = new Api({
+  baseUrl: "https://around-api.en.tripleten-services.com/v1",
+  headers: {
+    authorization: "7cf900fc-9f66-4afe-b1f0-09f480f95933",
+    "Content-Type": "application/json",
+  },
+});
+
+// ----- card loop ------
+api
+  .getInitialCards()
+  .then((cards) => {
+    cards.forEach((item) => {
+      const cardElement = getCardElement(item);
+      cardsList.prepend(cardElement);
+    });
+  })
+  .catch(console.error);
 
 // -------------------OPEN/CLOSE MODULE (Edit Profile)----------------------------------
 
@@ -89,7 +135,6 @@ function handleProfileFormSubmit(evt) {
 profileEditButton.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = profileDescription.textContent;
-  // fix error
   resetValidation(
     profileForm,
     [editModalNameInput, editModalDescriptionInput],
@@ -130,35 +175,6 @@ profileNewPostButton.addEventListener("click", () => {
 });
 
 profileAddCardForm.addEventListener("submit", handleAddCardSubmit);
-
-// ------------------------------CARDS ARRAY----------------------------------
-
-const initialCards = [
-  {
-    name: "Joseph, OR",
-    link: img1,
-  },
-  {
-    name: "Oregon Coast",
-    link: img2,
-  },
-  {
-    name: "Tumalo Falls, OR",
-    link: img3,
-  },
-  {
-    name: "Central Oregon Cascade Range",
-    link: img4,
-  },
-  {
-    name: "Multnomah Falls, OR",
-    link: img5,
-  },
-  {
-    name: "Southern Oregon",
-    link: img6,
-  },
-];
 
 // --------------------------CARD TEMPLATES-------------------------------
 
@@ -202,12 +218,6 @@ function getCardElement(data) {
   return cardElement;
 }
 
-// ----- card loop ------
-initialCards.forEach((item) => {
-  const cardElement = getCardElement(item);
-  cardsList.prepend(cardElement);
-});
-
 // ------ modal close button ------
 modalCloseButtons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -217,3 +227,5 @@ modalCloseButtons.forEach((button) => {
 });
 
 enableValidation(settings);
+
+// --------------------------------------------------------------------
