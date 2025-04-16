@@ -72,13 +72,17 @@ const api = new Api({
   },
 });
 
+// Destructure the second item in the callback of the .then()
 api
   .getAppInfo()
-  .then((cards) => {
+  .then(([cards, userInfo]) => {
     cards.forEach((item) => {
       const cardElement = getCardElement(item);
       cardsList.prepend(cardElement);
     });
+    profileAvatar.src = userInfo.avatar; // Handle the user's information
+    profileName.textContent = userInfo.name; // - set the src of the avatar image
+    profileDescription.textContent = userInfo.about; // set thetextContent of both the text elements
   })
   .catch(console.error);
 
@@ -86,6 +90,7 @@ api
 
 const profileEditButton = document.querySelector(".profile__edit-btn");
 const modalCloseButtons = document.querySelectorAll(".modal__button-close");
+const profileAvatar = document.querySelector(".profile__avatar");
 const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
 const editModal = document.querySelector("#edit-modal");
