@@ -74,7 +74,6 @@ const api = new Api({
 
 api
   .getAppInfo()
-  // Destructure the second item in the callback of the .then()
   .then(([cards, userInfo]) => {
     cards.forEach((item) => {
       const cardElement = getCardElement(item);
@@ -172,10 +171,7 @@ function handleAddCardSubmit(evt) {
   evt.preventDefault();
 
   api
-    .addNewCard({
-      name: addCardCaptionInput.value,
-      link: addCardLinkInput.value,
-    })
+    .addNewCard(addCardCaptionInput.value, addCardLinkInput.value)
     .then((data) => {
       const cardElement = getCardElement({ name: data.name, link: data.link });
       cardsList.prepend(cardElement);
