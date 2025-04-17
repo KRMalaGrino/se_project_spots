@@ -142,6 +142,48 @@
   border: none;
 }
 
+.modal__button-delete {
+  width: 156px;
+  height: 52px;
+  margin-left: auto;
+  padding: 18px 32px;
+  border-radius: 8px;
+
+  background-color: #212121;
+
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #fcf5e5;
+
+  cursor: pointer;
+  transition: opacity 0.25s linear;
+}
+
+.modal__button-cancel {
+  width: 156px;
+  height: 52px;
+  margin-left: auto;
+  padding: 18px 32px;
+  border-radius: 8px;
+
+  background-color: #212121;
+
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #fcf5e5;
+
+  cursor: pointer;
+  transition: opacity 0.25s linear;
+}
+
 .modal__label {
   display: flex;
   flex-direction: column;
