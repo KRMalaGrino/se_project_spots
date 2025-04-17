@@ -181,16 +181,6 @@ function handleAddCardSubmit(evt) {
     })
     .catch(console.error);
 }
-// const inputValues = {
-//   name: addCardCaptionInput.value,
-//   link: addCardLinkInput.value,
-// };
-
-// const cardElement = getCardElement(inputValues);
-// cardsList.prepend(cardElement);
-// closeModal(addCardModal);
-// profileAddCardForm.reset();
-// disableButton(evt.submitter, settings);
 
 profileNewPostButton.addEventListener("click", () => {
   openModal(addCardModal);
@@ -224,8 +214,23 @@ function getCardElement(data) {
     cardLikeBtn.classList.toggle("card__like-button_liked");
   });
 
+  const confirmDeleteModal = document.querySelector("#confirm-delete-modal");
+
+  let selectedCard = null;
+  let selectedCardId = null;
+
   cardDeleteBtn.addEventListener("click", () => {
-    cardElement.remove();
+    selectedCard = cardElement;
+    selectedCardId = data._id;
+
+    openModal(confirmDeleteModal);
+
+    api
+      .deleteCard(data.id)
+      .then(() => {
+        cardElement.remove();
+      })
+      .catch(console.error);
   });
 
   // card modal preview open
