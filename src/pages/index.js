@@ -171,17 +171,30 @@ const addCardModal = document.querySelector("#add-card-modal");
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
 
-  const inputValues = {
-    name: addCardCaptionInput.value,
-    link: addCardLinkInput.value,
-  };
-
-  const cardElement = getCardElement(inputValues);
-  cardsList.prepend(cardElement);
-  closeModal(addCardModal);
-  profileAddCardForm.reset();
-  disableButton(evt.submitter, settings);
+  api
+    .addNewCard({
+      name: addCardCaptionInput.value,
+      link: addCardLinkInput.value,
+    })
+    .then((data) => {
+      const cardElement = getCardElement({ name: data.name, link: data.link });
+      cardsList.prepend(cardElement);
+      closeModal(addCardModal);
+      profileAddCardForm.reset();
+      disableButton(evt.submitter, settings);
+    })
+    .catch(console.error);
 }
+// const inputValues = {
+//   name: addCardCaptionInput.value,
+//   link: addCardLinkInput.value,
+// };
+
+// const cardElement = getCardElement(inputValues);
+// cardsList.prepend(cardElement);
+// closeModal(addCardModal);
+// profileAddCardForm.reset();
+// disableButton(evt.submitter, settings);
 
 profileNewPostButton.addEventListener("click", () => {
   openModal(addCardModal);
