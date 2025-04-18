@@ -173,7 +173,11 @@ function handleAddCardSubmit(evt) {
   api
     .addNewCard(addCardCaptionInput.value, addCardLinkInput.value)
     .then((data) => {
-      const cardElement = getCardElement({ name: data.name, link: data.link });
+      const cardElement = getCardElement({
+        name: data.name,
+        link: data.link,
+        _id: data._id,
+      });
       cardsList.prepend(cardElement);
       closeModal(addCardModal);
       profileAddCardForm.reset();
@@ -196,6 +200,10 @@ const modalPreview = document.querySelector("#card-preview-modal");
 const modalImagePreview = document.querySelector(".modal__image-preview");
 const modalCaption = document.querySelector(".modal__image-caption");
 
+let selectedCard = null;
+let selectedCardId = null;
+const confirmDeleteModal = document.querySelector("#confirm-delete-modal");
+
 function getCardElement(data) {
   const cardElement = cardTemplate.content
     .querySelector(".card")
@@ -214,25 +222,6 @@ function getCardElement(data) {
     cardLikeBtn.classList.toggle("card__like-button_liked");
   });
 
-  const confirmDeleteModal = document.querySelector("#confirm-delete-modal");
-
-  let selectedCard = null;
-  let selectedCardId = null;
-
-  cardDeleteBtn.addEventListener("click", () => {
-    selectedCard = cardElement;
-    selectedCardId = data._id;
-
-    openModal(confirmDeleteModal);
-
-    api
-      .deleteCard(data.id)
-      .then(() => {
-        cardElement.remove();
-      })
-      .catch(console.error);
-  });
-
   // card modal preview open
   cardImageEl.addEventListener("click", () => {
     modalImagePreview.src = data.link;
@@ -240,6 +229,31 @@ function getCardElement(data) {
     modalCaption.textContent = data.name;
 
     openModal(modalPreview);
+  });
+
+  cardDeleteBtn.addEventListener("click", () => {
+    selectedCard = cardElement;
+    selectedCardId = data._id;
+
+    const confirmDeleteBtn = confirmDeleteModal.querySelector(
+      ".modal__button-delete"
+    );
+
+    confirmDeleteBtn.onclick = () => {
+      if (!selectedCardId || !selectedCard) return;
+
+      api
+        .deleteCard(selectedCardId)
+        .then(() => {
+          selectedCard.remove();
+          closeModal(confirmDeleteModal);
+          selectedCard = null;
+          selectedCardId = null;
+        })
+        .catch(console.error);
+    };
+
+    openModal(confirmDeleteModal);
   });
 
   return cardElement;
