@@ -219,7 +219,19 @@ function getCardElement(data) {
   cardImageEl.alt = data.name;
 
   cardLikeBtn.addEventListener("click", () => {
-    cardLikeBtn.classList.toggle("card__like-button_liked");
+    const isLiked = cardLikeBtn.classList.contains("card__like-button_liked");
+
+    const likeAction = isLiked
+      ? api.removeLike(data._id)
+      : api.addLike(data._id);
+
+    likeAction
+      .then(() => {
+        cardLikeBtn.classList.toggle("card__like-button_liked");
+      })
+      .catch((err) => {
+        console.error("Failed to like photo:", err);
+      });
   });
 
   // card modal preview open
