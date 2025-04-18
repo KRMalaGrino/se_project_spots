@@ -197,6 +197,40 @@
           <button type="button" class="modal__button-cancel">Cancel</button>
         </div>
       </div>
+      <div class="modal" id="edit-avatar-modal">
+        <div class="modal__container">
+          <form
+            name="edit-avatar"
+            class="modal__form"
+            id="edit-avatar-form"
+            novalidate
+          >
+            <h2 class="modal__title">Edit profile avatar</h2>
+            <button type="button" class="modal__button-close">
+              <img
+                class="modal__button-close-icon"
+                src="<%= require('./images/Close-Icon.svg')%>"
+                alt="close-icon"
+              />
+            </button>
+            <label for="avatar-link-input" class="modal__label"
+              >Profile Picture
+              <input
+                type="url"
+                class="modal__input"
+                id="edit-avatar-link-input"
+                name="Avatar link"
+                placeholder="Paste the link to an image"
+                required
+              />
+              <span class="modal__error" id="edit-avatar-link-input-error"
+                >Please enter a URL.</span
+              >
+            </label>
+            <button type="submit" class="modal__button-submit">Save</button>
+          </form>
+        </div>
+      </div>
     </div>
   </body>
 </html>
