@@ -17,6 +17,8 @@
   margin-right: 20px;
   object-fit: cover;
   border-radius: 8px;
+
+  cursor: pointer;
 }
 
 .profile__column {

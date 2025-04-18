@@ -149,7 +149,7 @@
   padding: 18px 32px;
   border-radius: 8px;
 
-  background-color: #212121;
+  background-color: #ff3333;
 
   font-family: "Poppins", Arial, sans-serif;
   font-size: 16px;
@@ -157,10 +157,15 @@
   line-height: 16px;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #fcf5e5;
+  color: black;
+  opacity: 0.7;
 
   cursor: pointer;
   transition: opacity 0.25s linear;
+}
+
+.modal__button-delete:hover {
+  opacity: 1;
 }
 
 .modal__button-cancel {

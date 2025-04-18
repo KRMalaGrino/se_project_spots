@@ -88,17 +88,24 @@ const addCardLinkInput = document.querySelector("#profile-add-card-link-input");
 const addCardCaptionInput = document.querySelector(
   "#profile-add-card-caption-input"
 );
-const cardTemplate = document.querySelector("#card-template");
-const cardsList = document.querySelector(".cards__list");
+// card variables -----------------
 const modalPreview = document.querySelector("#card-preview-modal");
 const modalImagePreview = document.querySelector(".modal__image-preview");
 const modalCaption = document.querySelector(".modal__image-caption");
+const cardTemplate = document.querySelector("#card-template");
+const cardsList = document.querySelector(".cards__list");
 let selectedCard = null;
 let selectedCardId = null;
 // modal other variables -----------------
 const modal = document.querySelectorAll(".modal");
 const modalCloseButtons = document.querySelectorAll(".modal__button-close");
 const confirmDeleteModal = document.querySelector("#confirm-delete-modal");
+const confirmDeleteBtn = confirmDeleteModal.querySelector(
+  ".modal__button-delete"
+);
+const cancelDeleteBtn = confirmDeleteModal.querySelector(
+  ".modal__button-cancel"
+);
 
 // ------------------ Instantiating the API class ---------------------
 
@@ -288,10 +295,7 @@ function getCardElement(data) {
     selectedCard = cardElement;
     selectedCardId = data._id;
 
-    const confirmDeleteBtn = confirmDeleteModal.querySelector(
-      ".modal__button-delete"
-    );
-
+    // confirm delete button -----
     confirmDeleteBtn.onclick = () => {
       if (!selectedCardId || !selectedCard) return;
 
@@ -304,6 +308,11 @@ function getCardElement(data) {
           selectedCardId = null;
         })
         .catch(console.error);
+    };
+
+    // cancel button -----
+    cancelDeleteBtn.onclick = () => {
+      closeModal(confirmDeleteModal);
     };
 
     openModal(confirmDeleteModal);
