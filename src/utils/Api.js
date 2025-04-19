@@ -38,13 +38,14 @@ class Api {
     }).then(this._handleResponse);
   }
 
+  // Saving before
   addNewCard(name, link) {
     return fetch(`${this._baseUrl}/cards`, {
       method: "POST",
       headers: this._headers,
       body: JSON.stringify({ name, link }),
     }).then(this._handleResponse);
-  }
+  } // Save after
 
   deleteCard(cardId) {
     return fetch(`${this._baseUrl}/cards/${cardId}`, {

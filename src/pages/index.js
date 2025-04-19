@@ -174,13 +174,19 @@ function handleEditAvatar(evt) {
 
   const avatarUrl = editAvatarInput.value;
 
+  const btn = evt.submitter;
+  btn.textContent = "Saving...";
+
   api
     .editAvatar(avatarUrl)
     .then((data) => {
       profileAvatar.src = data.avatar;
       closeModal(editAvatarModal);
     })
-    .catch(console.error);
+    .catch(console.error)
+    .finally(() => {
+      btn.textContent = "Save";
+    });
 }
 
 profileAvatar.addEventListener("click", () => {
@@ -195,6 +201,9 @@ editAvatarForm.addEventListener("submit", handleEditAvatar);
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
 
+  const btn = evt.submitter;
+  btn.textContent = "Saving...";
+
   api
     .editUserInfo({
       name: editModalNameInput.value,
@@ -205,7 +214,10 @@ function handleProfileFormSubmit(evt) {
       profileDescription.textContent = data.about;
       closeModal(editModal);
     })
-    .catch(console.error);
+    .catch(console.error)
+    .finally(() => {
+      btn.textContent = "Save";
+    });
 }
 
 profileEditButton.addEventListener("click", () => {
@@ -226,6 +238,9 @@ profileForm.addEventListener("submit", handleProfileFormSubmit);
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
 
+  const btn = evt.submitter;
+  btn.textContent = "Saving...";
+
   api
     .addNewCard(addCardCaptionInput.value, addCardLinkInput.value)
     .then((data) => {
@@ -239,7 +254,10 @@ function handleAddCardSubmit(evt) {
       profileAddCardForm.reset();
       disableButton(evt.submitter, settings);
     })
-    .catch(console.error);
+    .catch(console.error)
+    .finally(() => {
+      btn.textContent = "Save";
+    });
 }
 
 profileNewPostButton.addEventListener("click", () => {
@@ -299,6 +317,8 @@ function getCardElement(data) {
     confirmDeleteBtn.onclick = () => {
       if (!selectedCardId || !selectedCard) return;
 
+      confirmDeleteBtn.textContent = "Deleting...";
+
       api
         .deleteCard(selectedCardId)
         .then(() => {
@@ -307,7 +327,10 @@ function getCardElement(data) {
           selectedCard = null;
           selectedCardId = null;
         })
-        .catch(console.error);
+        .catch(console.error)
+        .finally(() => {
+          confirmDeleteBtn.textContent = "Delete";
+        });
     };
 
     // cancel button -----
