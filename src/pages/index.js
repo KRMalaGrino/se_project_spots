@@ -10,60 +10,6 @@ import {
 import "./index.css";
 import Api from "../utils/Api.js";
 
-const img1 = new URL(
-  "../images/1-photo-by-moritz-feldmann-from-pexels.jpg",
-  import.meta.url
-);
-const img2 = new URL(
-  "../images/2-photo-by-ceiline-from-pexels.jpg",
-  import.meta.url
-);
-const img3 = new URL(
-  "../images/3-photo-by-tubanur-dogan-from-pexels.jpg",
-  import.meta.url
-);
-const img4 = new URL(
-  "../images/4-photo-by-maurice-laschet-from-pexels.jpg",
-  import.meta.url
-);
-const img5 = new URL(
-  "../images/5-photo-by-van-anh-nguyen-from-pexels.jpg",
-  import.meta.url
-);
-const img6 = new URL(
-  "../images/6-photo-by-moritz-feldmann-from-pexels.jpg",
-  import.meta.url
-);
-
-// ------------------------------CARDS ARRAY----------------------------------
-
-const initialCards = [
-  {
-    name: "Joseph, OR",
-    link: img1,
-  },
-  {
-    name: "Oregon Coast",
-    link: img2,
-  },
-  {
-    name: "Tumalo Falls, OR",
-    link: img3,
-  },
-  {
-    name: "Central Oregon Cascade Range",
-    link: img4,
-  },
-  {
-    name: "Multnomah Falls, OR",
-    link: img5,
-  },
-  {
-    name: "Southern Oregon",
-    link: img6,
-  },
-];
-
 // ------------------------ Global variables --------------------------
 // avatar variables -----------------
 const editAvatarModal = document.querySelector("#edit-avatar-modal");
