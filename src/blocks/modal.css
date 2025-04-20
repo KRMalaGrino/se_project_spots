@@ -34,7 +34,6 @@
   box-sizing: border-box;
   width: 100%;
   max-width: 730px;
-  /* max-height: 80vh; */
   background-color: white;
 }
 
@@ -47,6 +46,12 @@
 .modal__container_type_preview {
   background-color: transparent;
   padding: 0;
+}
+
+.modal__container_type_delete {
+  display: flex;
+  flex-direction: column;
+  width: auto;
 }
 
 .modal__image-preview {
@@ -99,6 +104,11 @@
   -webkit-box-orient: vertical;
 }
 
+.modal__title_small {
+  font-size: 24px;
+  text-align: center;
+}
+
 .modal__button-close-icon {
 }
 
@@ -135,17 +145,23 @@
   height: 40px;
 }
 
-.modal__button-close_type_preview {
+.modal__button-close_type_outside {
   position: absolute;
   right: -45px;
   top: 3px;
   border: none;
 }
 
+.modal__buttons__wrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+
 .modal__button-delete {
   width: 156px;
   height: 52px;
-  margin-left: auto;
+  margin: 0 20px 0 0;
   padding: 18px 32px;
   border-radius: 8px;
 
@@ -171,7 +187,7 @@
 .modal__button-cancel {
   width: 156px;
   height: 52px;
-  margin-left: auto;
+  margin: 0;
   padding: 18px 32px;
   border-radius: 8px;
 
@@ -315,7 +331,7 @@
     right: 12px;
   }
 
-  .modal__button-close_type_preview {
+  .modal__button-close_type_outside {
     top: -45px;
     right: 0;
   }
