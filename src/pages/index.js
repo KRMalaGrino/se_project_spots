@@ -26,6 +26,7 @@ const profileDescription = document.querySelector(".profile__description");
 const editModalDescriptionInput = document.querySelector(
   "#profile-description-input"
 );
+let currentUserId;
 // add card variables -----------------
 const profileNewPostButton = document.querySelector(".profile__new-post-btn");
 const addCardModal = document.querySelector("#add-card-modal");
@@ -66,6 +67,8 @@ const api = new Api({
 api
   .getAppInfo()
   .then(([cards, userInfo]) => {
+    currentUserId = userInfo._id;
+
     cards.forEach((item) => {
       const cardElement = getCardElement(item);
       cardsList.prepend(cardElement);
@@ -229,6 +232,12 @@ function getCardElement(data) {
   cardImageEl.alt = data.name;
 
   // card like button -------------------------
+
+  const isLikedByUser = data.likes.some((user) => user._id === currentUserId);
+  if (isLikedByUser) {
+    cardLikeBtn.classList.add("card__like-button_liked");
+  }
+
   cardLikeBtn.addEventListener("click", () => {
     const isLiked = cardLikeBtn.classList.contains("card__like-button_liked");
 
