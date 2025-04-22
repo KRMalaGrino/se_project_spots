@@ -226,6 +226,7 @@ function getCardElement(data) {
   const cardNameEl = cardElement.querySelector(".card__title");
   const cardImageEl = cardElement.querySelector(".card__image");
   const cardLikeBtn = cardElement.querySelector(".card__like-button");
+  const cardIsLiked = "card__like-button_liked";
   const cardDeleteBtn = cardElement.querySelector(".card__delete-button");
 
   cardNameEl.textContent = data.name;
@@ -238,19 +239,26 @@ function getCardElement(data) {
     ? data.likes.some((user) => user._id === currentUserId)
     : false;
   if (isLikedByUser) {
-    cardLikeBtn.classList.add("card__like-button_liked");
+    cardLikeBtn.classList.add(cardIsLiked);
   }
 
   cardLikeBtn.addEventListener("click", () => {
-    const isLiked = cardLikeBtn.classList.contains("card__like-button_liked");
+    const isLiked = cardLikeBtn.classList.contains(cardIsLiked);
 
     const likeAction = isLiked
       ? api.removeLike(data._id)
       : api.addLike(data._id);
 
     likeAction
-      .then(() => {
-        cardLikeBtn.classList.toggle("card__like-button_liked");
+      .then((updatedCard) => {
+        const likesArray = Array.isArray(updatedCard.likes)
+          ? updatedCard.likes
+          : [];
+
+        const likedByUser = likesArray.some(
+          (user) => user._id === currentUserId
+        );
+        cardLikeBtn.classList.toggle(cardIsLiked, likedByUser);
       })
       .catch((err) => {
         console.error("Failed to like photo:", err);
