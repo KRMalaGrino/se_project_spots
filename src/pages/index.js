@@ -197,6 +197,7 @@ function handleAddCardSubmit(evt) {
         name: data.name,
         link: data.link,
         _id: data._id,
+        likes: data.likes || [],
       });
       cardsList.prepend(cardElement);
       closeModal(addCardModal);
@@ -233,7 +234,9 @@ function getCardElement(data) {
 
   // card like button -------------------------
 
-  const isLikedByUser = data.likes.some((user) => user._id === currentUserId);
+  const isLikedByUser = Array.isArray(data.likes)
+    ? data.likes.some((user) => user._id === currentUserId)
+    : false;
   if (isLikedByUser) {
     cardLikeBtn.classList.add("card__like-button_liked");
   }
