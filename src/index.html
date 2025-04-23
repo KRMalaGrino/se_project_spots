@@ -182,9 +182,12 @@
           <h2 class="modal__title modal__title_small">
             Are you sure you want to delete this image?
           </h2>
-          <button type="button" class="modal__button-close">
+          <button
+            type="button"
+            class="modal__button-close modal__button-close_type_outside"
+          >
             <img
-              class="modal__button-close-icon modal__button-close_type_outside"
+              class="modal__button-close-icon"
               src="<%= require('./images/Close-Icon.svg')%>"
               alt="close-icon"
             />
@@ -211,7 +214,9 @@
                 alt="close-icon"
               />
             </button>
-            <label for="avatar-link-input" class="modal__label"
+            <label
+              for="avatar-link-input"
+              class="modal__label modal__label_type_avatar"
               >Profile Picture
               <input
                 type="url"

@@ -79,7 +79,7 @@ api
   })
   .catch(console.error);
 
-// ----------------------- Open/Close Functions -----------------------
+// ------------------------ Global Functions -------------------------
 
 modal.forEach((modal) => {
   modal.addEventListener("mousedown", (evt) => {
@@ -235,7 +235,7 @@ function getCardElement(data) {
 
   // card like button -------------------------
 
-  const isLikedByUser = Array.isArray(data.likes)
+  const isLikedByUser = Array.isArray(data.isLiked)
     ? data.likes.some((user) => user._id === currentUserId)
     : false;
   if (isLikedByUser) {
@@ -251,7 +251,7 @@ function getCardElement(data) {
 
     likeAction
       .then((updatedCard) => {
-        const likesArray = Array.isArray(updatedCard.likes)
+        const likesArray = Array.isArray(updatedCard.isLiked)
           ? updatedCard.likes
           : [];
 
