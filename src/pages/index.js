@@ -44,7 +44,7 @@ const cardsList = document.querySelector(".cards__list");
 let selectedCard = null;
 let selectedCardId = null;
 // modal other variables -----------------
-const modal = document.querySelectorAll(".modal");
+const modals = document.querySelectorAll(".modal");
 const modalCloseButtons = document.querySelectorAll(".modal__button-close");
 const confirmDeleteModal = document.querySelector("#confirm-delete-modal");
 const confirmDeleteBtn = confirmDeleteModal.querySelector(
@@ -81,13 +81,13 @@ api
 
 // ------------------------ Global Functions -------------------------
 
-modal.forEach((modal) => {
-  modal.addEventListener("mousedown", (evt) => {
+modals.forEach((modals) => {
+  modals.addEventListener("mousedown", (evt) => {
     if (
       evt.target.classList.contains("modal") ||
       evt.target.classList.contains("modal__button-close")
     ) {
-      closeModal(modal);
+      closeModal(modals);
     }
   });
 });
@@ -99,20 +99,20 @@ function handleEscape(evt) {
   }
 }
 
-function openModal(modal) {
-  modal.classList.add("modal_opened");
+function openModal(modals) {
+  modals.classList.add("modal_opened");
   document.addEventListener("keydown", handleEscape);
 }
 
-function closeModal(modal) {
-  modal.classList.remove("modal_opened");
+function closeModal(modals) {
+  modals.classList.remove("modal_opened");
   document.removeEventListener("keydown", handleEscape);
 }
 
 modalCloseButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    const modal = button.closest(".modal");
-    closeModal(modal);
+    const modals = button.closest(".modal");
+    closeModal(modals);
   });
 });
 
