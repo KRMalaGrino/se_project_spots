@@ -25,7 +25,7 @@ We created this website using a reference from figma to replicate the layouts, t
 
 **Spots Video Demo**
 
-https://www.youtube.com/watch?v=jFb13efkXwA
+- https://www.youtube.com/watch?v=jFb13efkXwA
 
 **Video Description link**
 
