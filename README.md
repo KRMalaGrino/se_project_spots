@@ -23,7 +23,7 @@ We created this website using a reference from figma to replicate the layouts, t
 
 - https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1
 
-** Spots Video Demo **
+**Spots Video Demo**
 
 https://www.youtube.com/watch?v=jFb13efkXwA
 
