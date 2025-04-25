@@ -81,13 +81,13 @@ api
 
 // ------------------------ Global Functions -------------------------
 
-modals.forEach((modals) => {
-  modals.addEventListener("mousedown", (evt) => {
+modals.forEach((modal) => {
+  modal.addEventListener("mousedown", (evt) => {
     if (
       evt.target.classList.contains("modal") ||
       evt.target.classList.contains("modal__button-close")
     ) {
-      closeModal(modals);
+      closeModal(modal);
     }
   });
 });
@@ -238,7 +238,7 @@ function getCardElement(data) {
   const isLikedByUser = Array.isArray(data.isLiked)
     ? data.likes.some((user) => user._id === currentUserId)
     : false;
-  if (isLikedByUser) {
+  if (data.isLiked) {
     cardLikeBtn.classList.add(cardIsLiked);
   }
 
@@ -251,14 +251,7 @@ function getCardElement(data) {
 
     likeAction
       .then((updatedCard) => {
-        const likesArray = Array.isArray(updatedCard.isLiked)
-          ? updatedCard.likes
-          : [];
-
-        const likedByUser = likesArray.some(
-          (user) => user._id === currentUserId
-        );
-        cardLikeBtn.classList.toggle(cardIsLiked, likedByUser);
+        cardLikeBtn.classList.toggle(cardIsLiked, updatedCard.isLiked);
       })
       .catch((err) => {
         console.error("Failed to like photo:", err);
